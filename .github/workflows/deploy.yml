@@ -47,9 +47,9 @@ jobs:
 
     - name: Deploy to EKS
       run: |
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
-        kubectl apply -f k8s/configmap.yaml || true
-        kubectl apply -f k8s/secret.yaml || true
-        kubectl apply -f k8s/hpa.yaml || true
-        kubectl apply -f k8s/ingress.yaml || true
+        kubectl apply -f K8s/deployment.yaml
+        kubectl apply -f K8s/service.yaml
+        kubectl apply -f K8s/configmap.yaml || true
+        kubectl apply -f K8s/secret.yaml || true
+        kubectl apply -f K8s/hpa.yaml || true
+        kubectl apply -f K8s/ingress.yaml || true
