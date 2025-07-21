@@ -12,14 +12,14 @@ spec:
       labels:
         app: fastapi
     spec:
-       containers:
+      containers:
         - name: fastapi
           image: 843986363714.dkr.ecr.us-east-2.amazonaws.com/fastapi-service:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: fastapi-config
+            - secretRef:
+                name: fastapi-secret
 
-        ports:
-        - containerPort: 8000
-        envFrom:
-        - configMapRef:
-            name: fastapi-config
-        - secretRef:
-            name: fastapi-secret
